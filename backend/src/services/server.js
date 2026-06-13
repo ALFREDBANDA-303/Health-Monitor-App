@@ -1,6 +1,8 @@
 const express = require("express");
 const cors = require("cors");
-require("dotenv").config();
+const dotenv = require("dotenv");
+
+dotenv.config();
 
 const authRoutes = require("./routes/authRoutes");
 
@@ -12,7 +14,10 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 
 app.get("/", (req, res) => {
-  res.send("Health Monitor API Running");
+  res.status(200).json({
+    success: true,
+    message: "Health Monitor API Running",
+  });
 });
 
 const PORT = process.env.PORT || 5000;
