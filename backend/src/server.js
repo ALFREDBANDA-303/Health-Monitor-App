@@ -1,3 +1,6 @@
+require("./models/User");
+require("./models/HealthRecord");
+
 const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");

@@ -8,9 +8,9 @@ const dbPath = path.join(
 
 const db = new sqlite3.Database(dbPath, (err) => {
   if (err) {
-    console.error("Database connection failed:", err.message);
+    console.log("Database connection failed", err.message);
   } else {
-    console.log("Connected to SQLite database");
+    console.log("SQLite database connected");
   }
 });
 
